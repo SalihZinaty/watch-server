@@ -8,6 +8,7 @@ class StopWatch {
         this.watchNumber = watchNumber;
         this.stopFlag = true; // this flag meant to not start the same watch twice
         this.startFlag = false; //this flag meant to not stop the watch twice
+        this.stoppedTime = ''; // when stopping the watch time, update this param to save the time
     }
     start = () => {
         if (!this.startFlag) {
@@ -22,10 +23,11 @@ class StopWatch {
            showlap !== 'showlap' ? this.stopFlag = true : null;
             let elapsedTime = Math.floor(Date.now() - this.startTime); // calculating the elapsed time
             let formatted = new Date(elapsedTime).toISOString().substr(11,8); // send back formatted time : hh:mm:ss
+            this.stoppedTime = formatted;
             return formatted;
 
         } else {
-            return 'the watch already stopped'
+            return this.stoppedTime
         }
     }
 }
