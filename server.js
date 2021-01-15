@@ -29,7 +29,7 @@ const sessions = {};
 /*Routs */
 // this is the etrty route to the server
 app.get('/', (req, res) => {
-    res.send('<p><h3>welcome to stop-watch server please add a stop watch</h3>this server gives you the ability to do:<p>1. add a new stop watch to the lap using the API: /addwatch?name=THE_NAME_OF_THE_STOPWATCH</p><p>2. start an existing stop watch using the API: /startwatch?name=THE_NAME_OF_THE_STOPWATCH</p><p>3. stop an existing stop watch using the API: /stopwatch?name=THE_NAME_OF_THE_STOPWATCH</p><p>4. show all the stop watches that exists in the lap using the API: /showlap</p><br/><p>powered by Saleh Zinaty</p></p>')
+    res.send('<p><h3>welcome to watch server<br/>please add a stop watch</h3><p>Usage</p>:<p>1. add a new stop watch to the lap using the API: /addwatch?name=THE_NAME_OF_THE_STOPWATCH</p><p>2. start an existing stop watch using the API: /startwatch?name=THE_NAME_OF_THE_STOPWATCH</p><p>3. stop an existing stop watch using the API: /stopwatch?name=THE_NAME_OF_THE_STOPWATCH</p><p>4. show all the stop watches that exists in the lap using the API: /showlap</p><p>5. show user current time using the API: /currtime</p><br/><p>powered by Saleh Zinaty</p></p>')
 })
 // this route gives as the current time of the user
 app.get('/currtime',(req,res) => {
