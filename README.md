@@ -18,3 +18,5 @@ stop watch server using ExpressJS framework
     3. stop an existing stop watch using the API: /stopwatch?name=THE_NAME_OF_THE_STOPWATCH
 
     4. show all the stop watches that exists in the lap using the API: /showlap
+    
+    5. show the current time using the API: /currtime
